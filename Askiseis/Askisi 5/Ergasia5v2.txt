@@ -1,0 +1,53 @@
+1.
+ls ./new-*/as*.c ./new-*/as*.h
+Xrisimopoumai mono tin ls. Apo ton katalogo pou vriskomaste ./ vres ton ipokatalogo pou ksekina to onomatou me ‘new-‘ kai mesa se auto ton ipokatalogo psakse gia arxeia pou arxizoun me ‘as’ pou borei na periexoun apo 0 mexri N xaraktires kai telionoun se ‘.c’. To idio isxei kai gia arxeia ‘.h’. Psaxnei arxeia ‘.c’ i arxeia ‘.h’ ta opoia ksekinoun me ‘as’ kai vriskontai se ipokatalogo apo ekei pou vriskomai pou to onoma tou ksekina me ‘new-’.
+2.
+find -type f -name '*.c' -exec egrep '^#' {} \; | wc -l
+Psakse se olous tous ipokatalogous tou parontos katalogou ola ta arxeia (-type f) pou exoun san xaraktiristiko onoma otidipote kai na telionoun se ‘.c’. Xrisimopoioume to -exec gia na ektelesoume kati sta arxeia pou vriskei i find. Xrisimopoioume meta tin egrep gia na paroume tis grammes pou ksekinoun ‘^’ apo ‘#’. Oi aggiles xrisimopoiountai gia na diksoume oti ekei tha perasei to onoma tou arxeiou pou vriskei I find. Telos me tin wc metroume tis grammes (-l) pou arxizoun apo #. Anazitoumai to # sta arxeia giati gnorizoume oti oi entoles pros ton epeksergasti arxizoun me ‘#’.
+3.
+ls -lc | egrep '^-'| tr -s ' ' | cut -f9 -d' ' | grep '^.....\.c$' |head -n 5 | xargs rm
+==> Pio palio pou dimiourgithike
+
+find ./ -maxdepth 1 -name '*.c' -type f -printf '%T+ %p\n' | grep '\./.....\.c$' | sort | head -n 5 | cut -f2 -d' ' | xargs rm
+==> Pio palio pou epeksergastike
+Psakse (find) apo ton paron katalogo (./) kai meine mono se afton (-maxdepth 1) ola ta arxeia (-type f) opou to onoma tous telionei se ‘.c’ (-name ‘*.c’). Parousiase (-printf) tin ora tis telefteas tropopoiisis (‘%T+’) kai to onoma (‘%p’) tou arxeiou
+Xrisimopoioume tin xargs giati i rm prepei na parei ta arxeia san arguments.
+find – Search for files in a directory hierarchy
+current – Search location
+type -f – Searches only the regular files.
+-printf ‘%T+ %p\n’ – Prints the file’s last modification date and time in separated by + symbol. (Eg. 2015-07-22+13:42:40.0000000000). Here, %p indicates the file name. \n indicates new line.
+sort | head -n 1 – The sort command sorts the output and sends the output to head command to display the oldest file. Here, -n 1 indicates only one file i.e oldest file file.
+
+4.
+
+gcc wavengine.c |& grep -i 'error' | egrep 'c:13[0-9]{1}:' | cut -f2 -d':' | sort | uniq
+
+// xrisi tou regex c: gia na imaste sigouri oti the parume to proto meros tou output 
+ksekina me 13 ke exei ena tixaio arithmo apo 0 mexri 9
+
+Error stream
+By default, the standard error streams ("stderr") of the processes in a pipeline are not passed on through the pipe; instead, they are merged and directed to the console. However, many shells have additional syntax for changing this behavior. In the csh shell, for instance, using "|&" instead of "|" signifies that the standard error stream should also be merged with the standard output and fed to the next process. The Bourne Shell can also merge standard error with |& since bash 4.0[3] or using 2>&1, as well as redirect it to a different file.
+
+
+5.
+???????????????????????????????????????????????????????????????
+who -u | sort | cut -f1 -d' ' | uniq | egrep '^cs|a$'
+6.
+
+find . -name "*.c" -exec iconv -f ISO-8859-7 -t UTF-8 {} -o {} \;
+
+7.
+
+egrep *.c -e '#include' | cut -f2 -d'"' | cut -f2 -d'<' | cut -f1 -d'>' | sort | uniq
+
+8.
+
+ps u -e | egrep -e 'S[a-zA-Z0-9]*l' | tr -s ' '| cut -f2,11 -d' ' | cut -f1,2 -d'[' | cut -f1,2 -d']'
+
+9.
+
+cat mycommands.txt | sort | uniq -c | sort -r | tr -s ' ' | cut -f3 -d' ' | head -n 1 | xargs man
+
+10.
+
+ps -e | tee processes.txt | tail -n 8 | sort -k4

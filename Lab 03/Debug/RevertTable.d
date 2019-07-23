@@ -1,0 +1,1 @@
+RevertTable.o: ../RevertTable.c

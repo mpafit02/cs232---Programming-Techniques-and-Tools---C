@@ -1,0 +1,1 @@
+Parentheseis.o: ../Parentheseis.c

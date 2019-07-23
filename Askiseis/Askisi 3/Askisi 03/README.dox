@@ -1,0 +1,33 @@
+/**
+
+@mainpage EPL232 The n-puzzle and the algorithms
+
+@author Marios Pafitis
+
+This program is a smart solver for the n-puzzle game. It takes as input a puzzle of any size
+greater then 2 and it solves it. You can choose between 3 solving algorithms. 
+
+First we have the breadth-first algorithm. It is the slowest algorithm but it returns the shortest 
+path for the solution. Is great for puzzle sizes less than 4. 
+Run: ./puzzle breadth test3x3_1.txt solution_1.txt
+
+Second we have the best-first algorithm. It is a fast algorithm but it doesn't always return the shortest 
+path. It is implementing comparisons between the puzzle stages and gives priority to the puzzle with the less
+moves needed in order to be solved.
+Run: ./puzzle best test3x3_1.txt solution_1.txt
+
+Third is the A-Star algorithm. A fast algorithm and it returns the shortest path but it might be different from
+the breadth-first algorithm. Is using as comparison the height from the tree root and the movements needed in order
+to be solved.
+Run: ./puzzle a-star test3x3_1.txt solution_1.txt
+
+All the algorithms they are using a Queue and Tree.
+
+Please be patient... all the algorithms might be slow from Size = 4 and above.
+
+I assume that the user gives correct format of the file input. The only thing that I check is if the input puzzle
+has all the numbers correct and unique.
+
+Have fun solving the puzzles and remember is better to solve them by yourself, unless you will become stupid! :) 
+
+*/

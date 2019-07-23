@@ -1,0 +1,87 @@
+Statistics for file: file.txt
+-------------------------------------------------
+
+Total # of characters in file: 418
+Letters 297 71.052632 
+White space 77 18.421053 
+Digits 17 4.066986 
+Other characters 27 6.459330 
+Total # of words in file: 77
+The words of file.txt in alphabetical order:
+
+
+100
+123rd
+12:45
+15
+17
+2ats,
+And.
+Didn't
+Heyways?
+How.
+I'll
+PM,
+The
+Well,
+When?
+and
+anything
+at
+better
+brown
+chasing
+checked
+darn
+do
+dog,
+dog.
+dogs
+dreamed
+far
+fox
+fox,
+foxes
+had
+have
+he
+he
+he
+he
+he?
+his
+his
+his
+jumped
+jumped
+jumping
+just
+lazy
+lazy
+lazy
+lazy,
+leaped
+more
+of
+of
+over
+over
+pretty
+quick
+rabbits,
+sheep,
+so
+speaking
+tell
+the
+the
+ther
+to
+was
+was
+was
+watch
+who
+why
+with
+13

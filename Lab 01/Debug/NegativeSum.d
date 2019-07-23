@@ -1,0 +1,1 @@
+NegativeSum.o: ../NegativeSum.c

@@ -1,0 +1,1 @@
+SumOfIntegers.o: ../SumOfIntegers.c

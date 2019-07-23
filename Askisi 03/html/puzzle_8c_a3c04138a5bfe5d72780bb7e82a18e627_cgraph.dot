@@ -1,0 +1,40 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="initTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Tree_8c.html#ac0caa85cac3364521d000d800fcf8606",tooltip="Initializes a Tree. "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="readInFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a70e9f718161c069a1279037d61a67fd3",tooltip="Read input file. "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="findDistance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a73c33838401b0342232090c6775e3b8b",tooltip="Find Heuristic Distance. "];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="isSolved",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a87fc7249b7793c2ea516b14a38ce096c",tooltip="Check if the puzzle is solved. "];
+  Node7 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="solver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#af73c15474674cad316039eb436715f55",tooltip="Solves the puzzle. "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="initQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Queue_8c.html#a0736eb6f0292a6c793740b4116aa80fd",tooltip="Initializes a Queue. "];
+  Node12 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="enQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Queue_8c.html#acc0fd966d53bba2e410d035e0f7b7134",tooltip="Adds a new element in the queue. "];
+  Node12 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="freeTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Tree_8c.html#a417d9967b2c80988e4ebd573cf081c43",tooltip="Frees the tree. "];
+  Node15 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="deQueue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Queue_8c.html#acb7489808206fc221709df31833f2704",tooltip="Removes the first element from the queue. "];
+  Node12 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="findChilds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a3931548cfe684abd5f34cfb799e8b756",tooltip="Creates the possible children puzzles of a tree node. "];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="createPuzzle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a1ebf9d23b8d1ff1be6f892673b1461b0",tooltip="Create and copy a puzzle. "];
+  Node17 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a4b9708d87be7a409eff20e5e7e8b43c8",tooltip="Swap two pointers. "];
+  Node12 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="checkIfTheSame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$puzzle_8c.html#a19b3308b87082d85bd7b0c83ece49f7a",tooltip="Checks if we are the same with one of our parents. "];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="insertSorted",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Queue_8c.html#a70550c89d944ceae1bfc750f28f6b6e3",tooltip="Adds a new element in the ascending order queue. "];
+  Node12 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="insertAStar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Queue_8c.html#adde424ac429d80d5449c64c32ceb2db8",tooltip="Adds a new element in the ascending order queue. "];
+}

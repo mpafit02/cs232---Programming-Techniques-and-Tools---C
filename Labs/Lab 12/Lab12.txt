@@ -1,0 +1,11 @@
+1. ps aux | wc -l
+
+1,5. ps aux | tr -s ' ' | cut -d' ' -f1 | sort | uniq -c | sort -k1 -n -r
+
+3. ls -l | grep '^-'| grep '\<08:.. '
+
+4. cat words | grep '^.....$' | sort -r; cat words | grep '^.....$' | wc -l
+
+5. cat ./* | grep -v "Unix" | grep "Linux"
+
+6. ps aux --sort=start_time | grep "^root"

@@ -1,0 +1,1 @@
+FahrenheitToCelsius.o: ../FahrenheitToCelsius.c

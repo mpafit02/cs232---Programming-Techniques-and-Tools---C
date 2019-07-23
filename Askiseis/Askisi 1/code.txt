@@ -1,0 +1,40 @@
+char input[10];
+	scanf("%s", input);
+	short count, start, iIsSet, jIsSet, vIsSet = 0;
+	for (int k = 0; k < strlen(input); k++) {
+		if (!iIsSet) {
+			if (input[k] == ',') {
+				for (int m = 0; m < k; m++) {
+					command[0] *= pow(10, m);
+					command[0] += (input[m] - '0');
+				}
+				iIsSet = 1;
+				start = k;
+			}
+		} else {
+			if (input[k] == '=') {
+				count = 0;
+				if (k != strlen(input) - 1) {
+					++start;
+					for (int m = start; m < k; m++) {
+						command[1] *= pow(10, count);
+						command[1] += (input[m] - '0');
+						++count;
+					}
+					start = k;
+				}
+				jIsSet = 1;
+				count = 0;
+				if (k != strlen(input) - 1) {
+					++start;
+					for (int m = start; m < strlen(input); m++) {
+						command[2] *= pow(10, count);
+						command[2] += (input[m] - '0');
+						++count;
+					}
+					vIsSet = 1;
+				}
+				break;
+			}
+		}
+	}
